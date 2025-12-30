@@ -7,15 +7,23 @@ import { Button } from "@/components/ui/button";
 import BouquetCard from "@/components/BouquetCard";
 import { supabase, FlowerCatalog } from "@/lib/supabase";
 
+const categoryNames: Record<string, string> = {
+  sunflower: "Sunflower",
+  gerbera: "Gerbera",
+  orchid: "Orchid",
+  localrose: "Local Rose",
+  bangalorerose: "Bangalore Rose",
+};
+
 export default function CollectionPage() {
   const params = useParams();
   const router = useRouter();
-  const collectionName = params.name as string;
+  const collectionCategory = params.name as string;
   const [bouquets, setBouquets] = useState<FlowerCatalog[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   
-  const displayName = collectionName.charAt(0).toUpperCase() + collectionName.slice(1);
+  const displayName = categoryNames[collectionCategory] || collectionCategory;
 
   useEffect(() => {
     async function fetchBouquets() {
@@ -24,7 +32,7 @@ export default function CollectionPage() {
         const { data, error } = await supabase
           .from('flower_catalog')
           .select('*')
-          .eq('category', collectionName.toLowerCase());
+          .eq('category', collectionCategory);
 
         if (error) throw error;
         
@@ -38,7 +46,7 @@ export default function CollectionPage() {
     }
 
     fetchBouquets();
-  }, [collectionName]);
+  }, [collectionCategory]);
 
   return (
     <main className="min-h-screen pt-24 pb-16">

@@ -16,7 +16,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-primary-light/70 mb-6 leading-relaxed">
-              Creating beautiful moments through the art of floral design since 2013.
+              Creating beautiful moments through the art of floral design since 2024.
             </p>
             <div className="flex gap-4">
               <a
@@ -61,7 +61,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-semibold mb-4">Collections</h4>
             <ul className="space-y-3">
-              {["Sunflowers", "Gerberas", "Orchids", "Roses"].map((flower) => (
+              {["Sunflowers", "Gerberas", "Orchids", "Local Roses"].map((flower) => (
                 <li key={flower}>
                   <a
                     href="#collections"

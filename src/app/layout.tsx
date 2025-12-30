@@ -27,7 +27,7 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "Petal & Bloom - Beautiful Blooms for Every Moment",
+  title: "Whimsyy Blooms - Art of Bouquet",
   description: "Discover our curated collection of stunning flower bouquets, crafted to bring joy and elegance to your special occasions.",
 };
 
@@ -38,6 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo.jpg" type="image/jpeg" />
+      </head>
       <body
         className={`${playfairDisplay.variable} ${raleway.variable} ${cinzel.variable} antialiased`}
       >

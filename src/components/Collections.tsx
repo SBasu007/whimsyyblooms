@@ -5,27 +5,38 @@ import FlowerCard from "./FlowerCard";
 const flowers = [
   {
     name: "Sunflower",
+    category: "sunflower",
     description: "Bright and cheerful blooms that bring warmth and happiness to any space.",
     image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&auto=format&fit=crop&q=80",
     color: "#F5B041",
   },
   {
     name: "Gerbera",
+    category: "gerbera",
     description: "Vibrant daisy-like flowers available in a stunning array of colors.",
     image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&auto=format&fit=crop&q=80",
     color: "#E74C3C",
   },
   {
     name: "Orchid",
+    category: "orchid",
     description: "Exotic and elegant blooms that symbolize luxury and refined beauty.",
     image: "/orchids.png",
     color: "#CB94F7",
   },
   {
-    name: "Rose",
+    name: "Local Rose",
+    category: "localrose",
     description: "Timeless classics expressing love, passion and heartfelt emotions.",
     image: "/rose.png",
     color: "#C0392B",
+  },
+  {
+    name: "Bangalore Rose",
+    category: "bangalorerose",
+    description: "Premium roses known for their vibrant colors and long-lasting freshness.",
+    image: "/bangalorerose.png",
+    color: "#E91E63",
   },
 ];
 
@@ -48,7 +59,7 @@ const Collections = () => {
         </div>
 
         {/* Flower Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
           {flowers.map((flower, index) => (
             <FlowerCard
               key={flower.name}

@@ -5,15 +5,16 @@ import { useState } from "react";
 
 interface FlowerCardProps {
   name: string;
+  category: string;
   description: string;
   image: string;
   color: string;
   delay?: number;
 }
 
-const FlowerCard = ({ name, description, image, color, delay = 0 }: FlowerCardProps) => {
+const FlowerCard = ({ name, category, description, image, color, delay = 0 }: FlowerCardProps) => {
   const [showOverlay, setShowOverlay] = useState(false);
-  const collectionSlug = name.toLowerCase();
+  const collectionSlug = category;
   
   return (
     <div

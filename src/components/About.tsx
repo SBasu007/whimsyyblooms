@@ -15,8 +15,8 @@ const features = [
   },
   {
     icon: Sparkles,
-    title: "Same Day Delivery",
-    description: "Fresh flowers delivered to your doorstep within hours.",
+    title: "Pre-Order Delivery",
+    description: "Fresh flowers delivered to your doorstep within 4 to 5 days.",
   },
 ];
 
@@ -75,7 +75,7 @@ const About = () => {
               <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 bg-clip-text text-transparent">Natural Beauty</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              At Whimsyy Blooms, we believe every flower tells a story. For over a decade, 
+              At Whimsyy Blooms, we believe every flower tells a story. For over a year, 
               we&apos;ve been dedicated to creating stunning floral arrangements that 
               celebrate life&apos;s most precious moments.
             </p>
