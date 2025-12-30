@@ -1,8 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Whimsyy Blooms 🌸
+
+A beautiful and elegant flower shop website built with Next.js 16, featuring stunning lavender-themed design and smooth animations.
+
+## Features
+
+- 🎨 Beautiful lavender-based color palette
+- ✨ Smooth animations and transitions
+- 📱 Fully responsive design
+- ⚡ Built with Next.js 16 for optimal performance
+- 🎯 TypeScript for type safety
+- 💅 Tailwind CSS for styling
+- 🧩 Modular component architecture
+
+## Tech Stack
+
+- **Framework:** Next.js 16
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** Radix UI
+- **Icons:** Lucide React
+- **Fonts:** Playfair Display & Raleway
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +41,67 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+whimsyyblooms/
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── About.tsx
+│   │   ├── Collections.tsx
+│   │   ├── FlowerCard.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Navbar.tsx
+│   │   └── ui/
+│   ├── hooks/
+│   │   └── use-toast.ts
+│   └── lib/
+│       └── utils.ts
+├── public/
+├── components.json
+├── package.json
+├── tailwind.config.ts
+└── tsconfig.json
+```
 
-## Learn More
+## Components
 
-To learn more about Next.js, take a look at the following resources:
+- **Navbar:** Fixed navigation bar with mobile menu support
+- **Hero:** Eye-catching hero section with gradient animations
+- **Collections:** Showcase of flower categories with hover effects
+- **About:** Information section with image grid and features
+- **Footer:** Contact information and social links
+- **FlowerCard:** Reusable card component for displaying flowers
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project uses CSS variables for theming. You can customize colors in `src/app/globals.css`:
 
-## Deploy on Vercel
+```css
+:root {
+  --primary: 280 82% 78%;
+  --primary-dark: 280 60% 55%;
+  --primary-darker: 280 50% 40%;
+  /* ... more variables */
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## License
+
+This project is open source and available under the MIT License.
+
