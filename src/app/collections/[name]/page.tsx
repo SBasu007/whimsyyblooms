@@ -11,8 +11,10 @@ const categoryNames: Record<string, string> = {
   sunflower: "Sunflower",
   gerbera: "Gerbera",
   orchid: "Orchid",
-  localrose: "Local Rose",
-  bangalorerose: "Bangalore Rose",
+  localrose: "Market Roses",
+  bangalorerose: "Bangalore Roses",
+  hotwheels: "Hot Wheels",
+  chocolate: "Chocolates",
 };
 
 export default function CollectionPage() {
