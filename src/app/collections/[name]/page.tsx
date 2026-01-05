@@ -1,6 +1,6 @@
 "use client"
 
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,9 @@ const categoryNames: Record<string, string> = {
 export default function CollectionPage() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const collectionCategory = params.name as string;
+  const buyoutText = searchParams.get('buyout') || null;
   const [bouquets, setBouquets] = useState<FlowerCatalog[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -69,7 +71,7 @@ export default function CollectionPage() {
             {displayName} Collection
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Browse our beautiful selection of {displayName.toLowerCase()} bouquets
+            {buyoutText || `Browse our beautiful selection of ${displayName.toLowerCase()} bouquets`}
           </p>
         </div>
 

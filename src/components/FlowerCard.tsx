@@ -9,10 +9,11 @@ interface FlowerCardProps {
   description: string;
   image: string;
   color: string;
+  buyout?: string;
   delay?: number;
 }
 
-const FlowerCard = ({ name, category, description, image, color, delay = 0 }: FlowerCardProps) => {
+const FlowerCard = ({ name, category, description, image, color, buyout, delay = 0 }: FlowerCardProps) => {
   const [showOverlay, setShowOverlay] = useState(false);
   const collectionSlug = category;
   
@@ -40,7 +41,7 @@ const FlowerCard = ({ name, category, description, image, color, delay = 0 }: Fl
             {description}
           </p>
           <Link
-            href={`/collections/${collectionSlug}`}
+            href={`/collections/${collectionSlug}${buyout ? `?buyout=${encodeURIComponent(buyout)}` : ''}`}
             onClick={(e) => e.stopPropagation()}
             className="inline-flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-purple-50 transition-colors duration-300 shadow-lg"
           >
