@@ -26,11 +26,11 @@ const FlowerCard = ({ name, category, description, image, color, buyout, delay =
       style={{ animationDelay: `${delay}s` }}
     >
       {/* Image Container */}
-      <div className="relative h-64 md:h-72 overflow-hidden">
+      <div className="relative h-80 md:h-80 overflow-hidden">
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {/* Lavender Overlay with Details */}
         <div className={`absolute inset-0 bg-purple-400/90 ${showOverlay ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 flex flex-col items-center justify-center p-6 text-center`}>
