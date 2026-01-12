@@ -37,6 +37,30 @@ const defaultTopSelling: SlideItem[] = [
     price: 702,
     image: "/topselling/burningdesire.png",
   },
+  {
+    id: "4",
+    name: "Cotton Candy Confession",
+    price: 802,
+    image: "/topselling/cottoncandy.png",
+  },
+  {
+    id: "5",
+    name: "Sweet Treats",
+    price: 649,
+    image: "/topselling/sweettreats.png",
+  },
+  {
+    id: "6",
+    name: "Butter Cream",
+    price: 179,
+    image: "/topselling/buttercream.png",
+  },
+  {
+    id: "7",
+    name: "Immortal Roses",
+    price: 279,
+    image: "/topselling/immortalroses.png",
+  },
 ];
 
 const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps) => {

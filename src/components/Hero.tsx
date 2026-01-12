@@ -18,10 +18,10 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block px-4 py-2 bg-primary-light/50 text-primary-darker rounded-full text-sm font-medium mb-4 md:mb-6 animate-fade-up">
-          </span>
+          {/* <span className="inline-block px-4 py-2 bg-primary-light/50 text-primary-darker rounded-full text-sm font-medium mb-4 md:mb-6 animate-fade-up">
+          </span> */}
           
-          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 md:mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 md:mb-6 animate-fade-up pt-2" style={{ animationDelay: "0.1s" }}>
             Experience the Art of{" "}
             <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 bg-clip-text text-transparent">
               Bouquets
