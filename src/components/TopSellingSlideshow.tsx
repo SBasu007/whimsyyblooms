@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 
@@ -21,27 +21,21 @@ interface TopSellingShowProps {
 const defaultTopSelling: SlideItem[] = [
   {
     id: "1",
-    name: "Premium Red Roses",
-    price: 999,
-    image: "/rose.png",
+    name: "Witch's Arora",
+    price: 749,
+    image: "/topselling/witcharora.png",
   },
   {
     id: "2",
-    name: "Sunflower Bliss",
-    price: 749,
-    image: "/sunflower.png",
+    name: "Knight Wheels",
+    price: 949,
+    image: "/topselling/knightwheels.png",
   },
   {
     id: "3",
-    name: "Gerbera Mix",
-    price: 849,
-    image: "/gerbera.png",
-  },
-  {
-    id: "4",
-    name: "Exotic Orchids",
-    price: 1299,
-    image: "/orchid.png",
+    name: "Burning Desire",
+    price: 702,
+    image: "/topselling/burningdesire.png",
   },
 ];
 
@@ -84,9 +78,9 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-2">
+          {/* <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-2">
             Top Selling Bouquets
-          </h2>
+          </h2> */}
           {/* <p className="text-muted-foreground text-sm md:text-base">
             Our most loved bouquets by customers
           </p> */}
@@ -108,12 +102,19 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
             {/* Gradient Overlay for Text */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
+            {/* Top Selling Badge */}
+            <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 backdrop-blur-sm px-5 py-3 rounded-full shadow-xl animate-pulse">
+              <span className="text-white font-black text-base md:text-lg flex items-center gap-2">
+                 TOP SELLING
+              </span>
+            </div>
+
             {/* Item Info */}
             <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
-              <h3 className="text-xl md:text-3xl font-bold mb-2">
+              <h3 className="inline-block text-xl md:text-3xl font-bold mb-2 bg-purple-300/90 text-purple-900 px-4 md:px-6 py-2 md:py-3 rounded-lg backdrop-blur-sm">
                 {currentItem.name}
               </h3>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 mt-3">
                 <span className="text-2xl md:text-3xl font-bold">
                   ₹{currentItem.price}
                 </span>
@@ -121,10 +122,10 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
                   href={currentItem.whatsapp_link || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold transition-colors duration-300 shadow-lg"
                 >
-                  <Button variant="primary" size="sm" className="md:size-default">
-                    Order Now
-                  </Button>
+                  <MessageCircle className="w-5 h-5" />
+                  <span className="hidden sm:inline">Order</span>
                 </a>
               </div>
             </div>
@@ -132,7 +133,7 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
             {/* Navigation Arrows */}
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/80 hover:bg-white text-foreground transition-colors opacity-0 group-hover:opacity-100 md:opacity-100"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/80 hover:bg-white text-foreground transition-colors duration-200"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -140,7 +141,7 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
 
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/80 hover:bg-white text-foreground transition-colors opacity-0 group-hover:opacity-100 md:opacity-100"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/80 hover:bg-white text-foreground transition-colors duration-200"
               aria-label="Next slide"
             >
               <ChevronRight className="w-6 h-6" />
