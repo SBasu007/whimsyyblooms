@@ -48,6 +48,14 @@ const flowers = [
     color: "#E91E63",
   },
   {
+    name: "Satin Roses",
+    category: "satinroses",
+    description: "Satin roses known for their vibrant colors and immortal life.",
+    buyout:"Satin roses renowned for vibrant color and lasting freshness.",  
+    image: "/satinrose.png",
+    color: "#E91E63",
+  },
+  {
     name: "Hot Wheels",
     category: "hotwheels",
     description: "Adorable and fun toys to bring joy to every occasion.",
