@@ -24,42 +24,49 @@ const defaultTopSelling: SlideItem[] = [
     name: "Witch's Arora",
     price: 749,
     image: "/topselling/witcharora.png",
+    whatsapp_link:"https://wa.me/p/26017265714531806/917439347678",
   },
   {
     id: "2",
     name: "Knight Wheels",
     price: 949,
     image: "/topselling/knightwheels.png",
+    whatsapp_link:"https://wa.me/p/26180855038188421/917439347678",
   },
   {
     id: "3",
     name: "Burning Desire",
     price: 702,
     image: "/topselling/burningdesire.png",
+    whatsapp_link:"https://wa.me/p/25979410121656253/917439347678",
   },
   {
     id: "4",
     name: "Cotton Candy Confession",
     price: 802,
     image: "/topselling/cottoncandy.png",
+    whatsapp_link:"https://wa.me/p/25748462648117044/917439347678",
   },
   {
     id: "5",
     name: "Sweet Treats",
     price: 649,
     image: "/topselling/sweettreats.jpg",
+    whatsapp_link:"https://wa.me/p/25469161776078851/917439347678",
   },
   {
     id: "6",
     name: "Butter Cream",
     price: 179,
     image: "/topselling/buttercream.png",
+    whatsapp_link:"https://wa.me/p/25951125051162180/917439347678",
   },
   {
     id: "7",
     name: "Immortal Roses",
     price: 279,
     image: "/topselling/immortalroses.jpg",
+    whatsapp_link:"https://wa.me/p/33469291376017481/917439347678",
   },
 ];
 
@@ -113,7 +120,12 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
         {/* Slideshow Container */}
         <div className="relative max-w-4xl mx-auto">
           {/* Main Slide */}
-          <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden bg-white shadow-lg group">
+          <a
+            href={currentItem.whatsapp_link || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden bg-white shadow-lg group block cursor-pointer"
+          >
             <Image
               src={currentItem.image}
               alt={currentItem.name}
@@ -135,28 +147,22 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
 
             {/* Item Info */}
             <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
-              <h3 className="inline-block text-xl md:text-3xl font-bold mb-2 bg-purple-300/90 text-purple-900 px-4 md:px-6 py-2 md:py-3 rounded-lg backdrop-blur-sm">
-                {currentItem.name}
-              </h3>
-              <div className="flex items-center gap-4 mt-3">
-                <span className="text-2xl md:text-3xl font-bold">
+              <div className="flex items-end justify-between gap-4">
+                <h3 className="inline-block text-xl md:text-3xl font-bold bg-purple-300/90 text-purple-900 px-4 md:px-6 py-2 md:py-3 rounded-lg backdrop-blur-sm">
+                  {currentItem.name}
+                </h3>
+                <span className="text-2xl md:text-3xl font-bold whitespace-nowrap">
                   ₹{currentItem.price}
                 </span>
-                <a
-                  href={currentItem.whatsapp_link || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold transition-colors duration-300 shadow-lg"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  <span className="hidden sm:inline">Order</span>
-                </a>
               </div>
             </div>
 
             {/* Navigation Arrows */}
             <button
-              onClick={goToPrevious}
+              onClick={(e) => {
+                e.preventDefault();
+                goToPrevious();
+              }}
               className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/80 hover:bg-white text-foreground transition-colors duration-200"
               aria-label="Previous slide"
             >
@@ -164,13 +170,16 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
             </button>
 
             <button
-              onClick={goToNext}
+              onClick={(e) => {
+                e.preventDefault();
+                goToNext();
+              }}
               className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/80 hover:bg-white text-foreground transition-colors duration-200"
               aria-label="Next slide"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
-          </div>
+          </a>
 
           {/* Indicators / Dots */}
           <div className="flex justify-center gap-2 mt-6">

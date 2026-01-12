@@ -28,18 +28,18 @@ const Hero = () => {
             </span>
           </h1>
           
-          <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base md:text-xl text-muted-foreground mb-3 md:mb-4 max-w-xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
             Discover our curated collection of stunning flower bouquets, 
             crafted to bring joy and elegance to your special occasions.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <a href="#collections">
               <Button variant="primary" size="lg">
                 Explore Collections
               </Button>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
