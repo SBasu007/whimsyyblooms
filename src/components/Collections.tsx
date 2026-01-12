@@ -2,6 +2,7 @@
 
 
 import { useRef } from "react";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import FlowerCard from "./FlowerCard";
 
@@ -98,13 +99,25 @@ const Collections = () => {
         {/* Mobile: grid, Desktop: horizontal carousel */}
         <div>
           {/* Mobile grid (shown on small screens) */}
-          <div className="grid grid-cols-1 gap-6 md:hidden">
+          <div className="grid grid-cols-2 gap-4 md:hidden">
             {flowers.map((flower, index) => (
-              <FlowerCard
+              <Link 
                 key={flower.name}
-                {...flower}
-                delay={index * 0.1}
-              />
+                href={`/collections/${flower.category}${flower.buyout ? `?buyout=${encodeURIComponent(flower.buyout)}` : ''}`}
+                className="flex flex-col items-center animate-fade-up group"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-sm group-hover:shadow-md transition-shadow">
+                  <img
+                    src={flower.image}
+                    alt={flower.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <p className="text-center text-sm font-semibold text-foreground mt-3 group-hover:text-primary transition-colors">
+                  {flower.name}
+                </p>
+              </Link>
             ))}
           </div>
           {/* Desktop carousel (shown on md and up) */}
