@@ -47,7 +47,7 @@ const defaultTopSelling: SlideItem[] = [
     id: "5",
     name: "Sweet Treats",
     price: 649,
-    image: "/topselling/sweettreats.png",
+    image: "/topselling/sweettreats.jpg",
   },
   {
     id: "6",
@@ -59,7 +59,7 @@ const defaultTopSelling: SlideItem[] = [
     id: "7",
     name: "Immortal Roses",
     price: 279,
-    image: "/topselling/immortalroses.png",
+    image: "/topselling/immortalroses.jng",
   },
 ];
 
