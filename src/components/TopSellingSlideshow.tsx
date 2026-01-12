@@ -59,7 +59,7 @@ const defaultTopSelling: SlideItem[] = [
     id: "7",
     name: "Immortal Roses",
     price: 279,
-    image: "/topselling/immortalroses.jng",
+    image: "/topselling/immortalroses.jpg",
   },
 ];
 
