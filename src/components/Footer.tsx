@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <Flower2 className="w-8 h-8 text-primary" />
+              
               <span className="font-display text-2xl font-semibold">
                 Whimsyy Blooms
               </span>
@@ -20,7 +20,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/whimsyy_blooms/"
                 className="w-10 h-10 rounded-full bg-primary-lighter/10 flex items-center justify-center hover:bg-primary/30 transition-colors duration-300"
               >
                 <Instagram className="w-5 h-5" />
@@ -30,12 +30,6 @@ const Footer = () => {
                 className="w-10 h-10 rounded-full bg-primary-lighter/10 flex items-center justify-center hover:bg-primary/30 transition-colors duration-300"
               >
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-primary-lighter/10 flex items-center justify-center hover:bg-primary/30 transition-colors duration-300"
-              >
-                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -61,7 +55,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-semibold mb-4">Collections</h4>
             <ul className="space-y-3">
-              {["Sunflowers", "Gerberas", "Orchids", "Local Roses"].map((flower) => (
+              {["Sunflowers", "Gerberas", "Orchids", "Local Roses", "Bangalore Roses", "Satin Roses", "Hot Wheels", "Chocolates"].map((flower) => (
                 <li key={flower}>
                   <a
                     href="#collections"

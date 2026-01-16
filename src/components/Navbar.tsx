@@ -63,7 +63,7 @@ const Navbar = () => {
       );
       setSuggestions(filtered);
     } else {
-      setSuggestions([]);
+      setSuggestions(flowers);
     }
   };
 
@@ -156,6 +156,7 @@ const Navbar = () => {
                   placeholder="I want to buy..."
                   value={searchQuery}
                   onChange={(e) => handleSearchInput(e.target.value)}
+                  onFocus={() => setSuggestions(flowers)}
                   className="flex-1 px-4 py-2 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary-dark"
                 />
                 <Button variant="primary" size="sm" type="submit">

@@ -19,7 +19,7 @@ const creators: CreatorProps[] = [
   },
   {
     name: "Soumodeep Saha",
-    role: "Head of Finance",
+    role: "Head of Finance & Management",
     education: "Pursuing Bachelor in Commerce (Honours)",
     description:
       "The numbers wizard who keeps everything running smoothly — handling all financial planning, management, and smart growth decisions with impressive precision.",

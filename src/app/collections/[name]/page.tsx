@@ -18,6 +18,17 @@ const categoryNames: Record<string, string> = {
   satinroses: "Satin Roses",
 };
 
+const collectionOrder = [
+  "sunflower",
+  "gerbera",
+  "orchid",
+  "localrose",
+  "bangalorerose",
+  "satinroses",
+  "hotwheels",
+  "chocolate",
+];
+
 export default function CollectionPage() {
   const params = useParams();
   const router = useRouter();
@@ -29,6 +40,12 @@ export default function CollectionPage() {
   const [error, setError] = useState<string | null>(null);
   
   const displayName = categoryNames[collectionCategory] || collectionCategory;
+
+  const handleNextCollection = () => {
+    const currentIndex = collectionOrder.indexOf(collectionCategory);
+    const nextIndex = (currentIndex + 1) % collectionOrder.length;
+    router.push(`/collections/${collectionOrder[nextIndex]}`);
+  };
 
   useEffect(() => {
     async function fetchBouquets() {
@@ -105,6 +122,16 @@ export default function CollectionPage() {
             <p className="text-muted-foreground text-xl">No bouquets found in this collection.</p>
           </div>
         )}
+
+        {/* Next Collection Button */}
+        <div className="flex justify-center mt-12">
+          <Button 
+            variant="primary" 
+            onClick={handleNextCollection}
+          >
+            Next Collection →
+          </Button>
+        </div>
       </div>
     </main>
   );

@@ -51,7 +51,7 @@ const flowers = [
     name: "Satin Roses",
     category: "satinroses",
     description: "Satin roses known for their vibrant colors and immortal life.",
-    buyout:"Satin roses renowned for vibrant color and lasting freshness.",  
+    buyout:"Satin roses are artificial blooms expertly fashioned from lustrous satin fabric, capturing the timeless",  
     image: "/satinrose.png",
     color: "#E91E63",
   },
