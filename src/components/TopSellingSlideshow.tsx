@@ -21,6 +21,13 @@ interface TopSellingShowProps {
 const defaultTopSelling: SlideItem[] = [
   {
     id: "1",
+    name: "Vampire's Kiss",
+    price: 749,
+    image: "/topselling/vampirekiss.jpg",
+    whatsapp_link:"https://wa.me/p/25833283482976248/917439347678",
+  },
+  {
+    id: "8",
     name: "Witch's Arora",
     price: 749,
     image: "/topselling/witcharora.png",

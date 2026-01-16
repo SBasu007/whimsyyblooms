@@ -1,6 +1,6 @@
 "use client"
 
-import { Leaf, Heart, Sparkles } from "lucide-react";
+import { Leaf, Heart, Sparkles, Flower } from "lucide-react";
 
 const features = [
   {
@@ -16,8 +16,13 @@ const features = [
   {
     icon: Sparkles,
     title: "Pre-Order Delivery",
-    description: "Fresh flowers delivered to your doorstep within 4 to 5 days.",
+    description: "Fresh flowers delivered to your doorstep within 2 to 3 days.",
   },
+  {
+    icon: Flower,
+    title: "Unique Designs",
+    description: "Every design may differ as ever flowers blooms differently",
+  }
 ];
 
 const About = () => {
@@ -70,11 +75,11 @@ const About = () => {
             <span className="inline-block px-4 py-2 bg-primary-light/50 text-primary-darker rounded-full text-sm font-medium mb-4">
               About Us
             </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
               Crafting Moments of{" "}
               <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 bg-clip-text text-transparent">Natural Beauty</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
               At Whimsyy Blooms, we believe every flower tells a story. For over a year, 
               we&apos;ve been dedicated to creating stunning floral arrangements that 
               celebrate life&apos;s most precious moments.
