@@ -44,7 +44,7 @@ const defaultTopSelling: SlideItem[] = [
     id: "3",
     name: "Burning Desire",
     price: 702,
-    image: "/topselling/burningdesire.png",
+    image: "/topselling/burningdesire.jpg",
     whatsapp_link:"https://wa.me/p/25979410121656253/917439347678",
   },
   {
