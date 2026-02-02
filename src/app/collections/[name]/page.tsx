@@ -16,6 +16,7 @@ const categoryNames: Record<string, string> = {
   hotwheels: "Hot Wheels",
   chocolate: "Chocolates",
   satinroses: "Satin Roses",
+  valentine: "Valentine's Day",
 };
 
 const collectionOrder = [
@@ -27,6 +28,7 @@ const collectionOrder = [
   "satinroses",
   "hotwheels",
   "chocolate",
+  "valentine",
 ];
 
 export default function CollectionPage() {
@@ -51,8 +53,10 @@ export default function CollectionPage() {
     async function fetchBouquets() {
       try {
         setLoading(true);
+        // Use valentine_flower_catalogue table for valentine category, otherwise use flower_catalog
+        const tableName = collectionCategory === 'valentine' ? 'valentine_flower_catalogue' : 'flower_catalog';
         const { data, error } = await supabase
-          .from('flower_catalog')
+          .from(tableName)
           .select('*')
           .eq('category', collectionCategory);
 
