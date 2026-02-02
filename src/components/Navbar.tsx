@@ -8,6 +8,10 @@ import { useRouter } from "next/navigation";
 
 const flowers = [
   {
+    name: "Valentine's Day",
+    category: "valentine",
+  },
+  {
     name: "Sunflower",
     category: "sunflower",
   },
