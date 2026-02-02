@@ -85,6 +85,42 @@ const defaultTopSelling: SlideItem[] = [
     whatsapp_link: "https://wa.me/p/25434170702878260/917439347678",
   },
   {
+  id: "c754ef58-62f2-4ce7-9a80-06207bd3d830",
+  name: "CR7 Era Bloom",
+  price: 479,
+  image: "https://res.cloudinary.com/dxfcddrjr/image/upload/v1770059335/cr7_znvfdn.jpg",
+  whatsapp_link: "https://wa.me/p/25119197307753145/917439347678",
+},
+{
+  id: "fdd29d97-3570-4600-b3c3-71f7927d87a8",
+  name: "Golden Hour Garden",
+  price: 549,
+  image: "https://res.cloudinary.com/dxfcddrjr/image/upload/v1770059335/Goldenhourgarden_xzclyh.jpg",
+  whatsapp_link: "https://wa.me/p/26522686463983768/917439347678",
+},
+{
+  id: "04874185-01e2-46b1-a69e-f85d5a2c4859",
+  name: "LM10 Era Bloom",
+  price: 479,
+  image: "https://res.cloudinary.com/dxfcddrjr/image/upload/v1770059335/lm10_ha42fn.jpg",
+  whatsapp_link: "https://wa.me/p/25849349178087920/917439347678",
+},
+{
+  id: "995b0d33-a121-4949-bb98-52a17a4f66e8",
+  name: "Scarlet Promise",
+  price: 399,
+  image: "https://res.cloudinary.com/dxfcddrjr/image/upload/v1770059335/Scarletpromise_nz95yw.jpg",
+  whatsapp_link: "https://wa.me/p/26365812686359936/917439347678",
+},
+{
+  id: "c42968ab-7cd1-4984-8d52-ceefa16ad1e3",
+  name: "Soft Crimson",
+  price: 299,
+  image: "https://res.cloudinary.com/dxfcddrjr/image/upload/v1770059334/softcrimson_ro9wc2.jpg",
+  whatsapp_link: "https://wa.me/p/25595528280086284/917439347678",
+},
+
+  {
     id: "be4f8319-c212-42e1-8330-44ff83e4dd07",
     name: "Blue Moon",
     price: 999,
@@ -160,13 +196,6 @@ const defaultTopSelling: SlideItem[] = [
     price: 899,
     image: "https://res.cloudinary.com/dxfcddrjr/image/upload/v1767169155/dreambouquet_bwzqqh.jpg",
     whatsapp_link: "https://wa.me/p/25932759502994435/917439347678",
-  },
-  {
-    id: "e590c71c-fadd-419c-9056-466b3ab632bf",
-    name: "Golden Ray Pop",
-    price: 119,
-    image: "https://res.cloudinary.com/dxfcddrjr/image/upload/v1767100538/goldenraypops_zsye7o.jpg",
-    whatsapp_link: "https://wa.me/p/26398764403047383/917439347678",
   },
   {
     id: "5e376a7b-a1a1-4c35-8e77-1ba2b943f06c",
@@ -300,13 +329,6 @@ const defaultTopSelling: SlideItem[] = [
     price: 839,
     image: "https://res.cloudinary.com/dxfcddrjr/image/upload/v1767122906/vampirekiss_voahgm.jpg",
     whatsapp_link: "https://wa.me/p/25833283482976248/917439347678",
-  },
-  {
-    id: "8e01d420-9ee5-49e8-a106-776634166a8a",
-    name: "Velvet Sun",
-    price: 119,
-    image: "https://res.cloudinary.com/dxfcddrjr/image/upload/v1767100538/VelvetSun_pyxpdi.jpg",
-    whatsapp_link: "https://wa.me/p/24855533907453964/917439347678",
   },
   {
     id: "6c7116e9-92d1-48d8-9b00-2c97d475f3da",
