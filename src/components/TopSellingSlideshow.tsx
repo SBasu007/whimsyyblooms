@@ -156,13 +156,6 @@ const defaultTopSelling: SlideItem[] = [
     whatsapp_link: "https://wa.me/p/25375346318817363/917439347678",
   },
   {
-    id: "a7c7bcc4-d0bd-4b50-b98a-becbb3a4a63f",
-    name: "Contrasting Duo",
-    price: 619,
-    image: "https://res.cloudinary.com/dxfcddrjr/image/upload/v1767121665/contrasting_jjd5pz.jpg",
-    whatsapp_link: "https://wa.me/p/33149968931285025/917439347678",
-  },
-  {
     id: "33970513-4256-4cc8-9f7d-16bc8e3268da",
     name: "Cotton Candy Confession",
     price: 899,
