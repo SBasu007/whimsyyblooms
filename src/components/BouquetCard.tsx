@@ -1,7 +1,9 @@
 "use client"
 
+import Image from "next/image";
 import { MessageCircle } from "lucide-react";
 import { Button } from "./ui/button";
+import { cloudinaryUrl } from "@/lib/cloudinary";
 
 interface BouquetCardProps {
   id: string;
@@ -27,10 +29,14 @@ const BouquetCard = ({ id, name, description, price, image, whatsapp_link, delay
     >
       {/* Image Container */}
       <div className="relative h-64 overflow-hidden flex-shrink-0">
-        <img
-          src={image || '/placeholder.jpg'}
+        <Image
+          src={cloudinaryUrl(image, 800) || '/placeholder.jpg'}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          fill
+          unoptimized
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          loading="lazy"
         />
       </div>
 

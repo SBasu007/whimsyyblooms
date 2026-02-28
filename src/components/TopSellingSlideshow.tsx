@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import { cloudinaryUrl } from "@/lib/cloudinary";
 
 interface SlideItem {
   id: string;
@@ -397,9 +398,10 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
             className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden bg-white shadow-lg group block cursor-pointer"
           >
             <Image
-              src={currentItem.image}
+              src={cloudinaryUrl(currentItem.image, 960)}
               alt={currentItem.name}
               fill
+              unoptimized
               className="w-full h-full object-cover transition-opacity duration-500"
               priority={currentIndex === 0}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 800px"

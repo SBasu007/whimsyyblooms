@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image";
+
 interface CreatorProps {
   name: string;
   role: string;
@@ -15,7 +17,7 @@ const creators: CreatorProps[] = [
     education: "Pursuing a three-year Multidisciplinary B.Com program.",
     description:
       "The creative heart of Whimsyy Blooms — every artistic, modern bouquet you see is handcrafted by him with an exquisite eye for detail and contemporary elegance.",
-    image: "creators/ambar.png",
+    image: "/creators/ambar.png",
   },
   {
     name: "Soumodeep Saha",
@@ -23,7 +25,7 @@ const creators: CreatorProps[] = [
     education: "Pursuing Bachelor in Commerce (Honours)",
     description:
       "The numbers wizard who keeps everything running smoothly — handling all financial planning, management, and smart growth decisions with impressive precision.",
-    image: "creators/soumodeep.png",
+    image: "/creators/soumodeep.png",
   },
   {
     name: "Preetam Mukherjee",
@@ -31,7 +33,7 @@ const creators: CreatorProps[] = [
     education: "Pursuing Bachelor in Microbiology (Honours)",
     description:
       "The visionary strategist steering the brand forward — executing our big-picture goals and bringing Whimsyy Blooms to life across social media with energy and flair.",
-    image: "creators/preetam.png",
+    image: "/creators/preetam.png",
   },
 ];
 
@@ -40,11 +42,14 @@ const CreatorCard = ({ creator }: { creator: CreatorProps }) => {
     <div className="flex flex-col items-center text-center animate-fade-up">
       {/* Image Container */}
       <div className="mb-6 w-full max-w-xs">
-        <div className="rounded-2xl overflow-hidden shadow-soft aspect-square">
-          <img
+        <div className="rounded-2xl overflow-hidden shadow-soft aspect-square relative">
+          <Image
             src={creator.image}
             alt={creator.name}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 80vw, 320px"
+            loading="lazy"
           />
         </div>
       </div>

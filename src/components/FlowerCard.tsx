@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -27,10 +28,13 @@ const FlowerCard = ({ name, category, description, image, color, buyout, delay =
     >
       {/* Image Container */}
       <div className="relative h-80 md:h-80 overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(max-width: 768px) 50vw, 320px"
+          loading="lazy"
         />
         {/* Lavender Overlay with Details */}
         <div className={`absolute inset-0 bg-purple-400/90 ${showOverlay ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 flex flex-col items-center justify-center p-6 text-center`}>
