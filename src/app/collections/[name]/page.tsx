@@ -12,7 +12,7 @@ const categoryNames: Record<string, string> = {
   gerbera: "Gerbera",
   orchid: "Orchid",
   localrose: "Market Roses",
-  bangalorerose: "Bangalore Roses",
+  bangalorerose: "Premium Roses",
   hotwheels: "Hot Wheels",
   chocolate: "Chocolates",
   satinroses: "Satin Roses",

@@ -91,9 +91,20 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-lighter/10 mt-12 pt-8 text-center">
+        <div className="border-t border-primary-lighter/10 mt-12 pt-8 flex flex-col gap-2 text-left md:flex-row md:items-center md:justify-between">
           <p className="text-primary-light/50 text-sm">
             © {new Date().getFullYear()} Whimsyy Blooms. All rights reserved.
+          </p>
+          <p className="text-primary-light/50 text-sm">
+            Made by{" "}
+            <a
+              href="https://www.linkedin.com/in/soumyadeep-basu-88b6b91ba"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-light/70 hover:text-primary transition-colors duration-300"
+            >
+              Soumyadeep Basu
+            </a>
           </p>
         </div>
       </div>
