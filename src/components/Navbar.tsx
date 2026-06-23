@@ -5,6 +5,12 @@ import { Menu, X, Search } from "lucide-react";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { Bubblegum_Sans } from "next/font/google";
+
+const bubblegum = Bubblegum_Sans({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const flowers = [
   {
@@ -55,6 +61,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/#home" },
     { name: "Collections", href: "/#collections" },
+    { name: "Browse", href: "/browse" },
     { name: "About", href: "/#about" },
     { name: "Creators", href: "/#creators" },
   ];
@@ -108,9 +115,11 @@ const Navbar = () => {
               height={48} 
               className="w-10 h-10 md:w-12 md:h-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="text-xl md:text-2xl font-semibold text-foreground font-[family-name:var(--font-cinzel)]">
-              WHIMSYY BLOOMS
-            </span>
+            <span
+  className={`${bubblegum.className} text-2xl md:text-3xl text-foreground`}
+>
+  WHIMSYY BLOOMS
+</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -119,15 +128,19 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary-dark font-medium transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-dark after:transition-all after:duration-300 hover:after:w-full"
+                className={`${bubblegum.className} text-lg md:text-xl text-muted-foreground hover:text-primary-dark transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-dark after:transition-all after:duration-300 hover:after:w-full`}
               >
                 {link.name}
               </a>
             ))}
             <a href="https://wa.me/917439347678" target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" size="sm">
-                Contact Us
-              </Button>
+              <Button
+  variant="primary"
+  size="sm"
+  className={`${bubblegum.className} text-lg`}
+>
+  Contact Us
+</Button>
             </a>
           </div>
 
@@ -195,15 +208,18 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-muted-foreground hover:text-primary-dark font-medium transition-colors duration-200 py-2"
+                  className={`${bubblegum.className} text-xl text-muted-foreground hover:text-primary-dark transition-colors duration-200 py-2`}
                 >
                   {link.name}
                 </a>
               ))}
               <a href="https://wa.me/917439347678" target="_blank" rel="noopener noreferrer" className="w-full">
-                <Button variant="primary" className="w-full mt-2">
-                  Contact Us
-                </Button>
+                <Button
+  variant="primary"
+  className={`${bubblegum.className} text-lg w-full mt-2`}
+>
+  Contact Us
+</Button>
               </a>
             </div>
           </div>

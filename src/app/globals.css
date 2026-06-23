@@ -185,3 +185,144 @@
     }
   }
 }
+
+@keyframes petalWind {
+  0% {
+    transform:
+      translate3d(0, -150px, 0)
+      rotate(var(--rotation));
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  25% {
+    transform:
+      translate3d(calc(25vw + var(--drift) * 0.25), 25vh, 0)
+      rotate(calc(var(--rotation) + 120deg));
+  }
+
+  50% {
+    transform:
+      translate3d(calc(50vw + var(--drift) * 0.5), 50vh, 0)
+      rotate(calc(var(--rotation) + 240deg));
+  }
+
+  75% {
+    transform:
+      translate3d(calc(75vw + var(--drift) * 0.75), 75vh, 0)
+      rotate(calc(var(--rotation) + 320deg));
+  }
+
+  100% {
+    transform:
+      translate3d(calc(100vw + var(--drift)), 120vh, 0)
+      rotate(calc(var(--rotation) + 540deg));
+    opacity: 0;
+  }
+}
+
+.petal {
+  position: absolute;
+  top: -150px;
+  animation: petalWind linear infinite;
+  will-change: transform;
+}
+
+/* ── Dual-thumb Range Slider ── */
+.range-slider-wrap {
+  position: relative;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.range-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+  border-radius: 999px;
+  background: hsl(280 20% 90%);
+}
+
+.range-fill {
+  position: absolute;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, hsl(280 82% 78%), hsl(280 60% 55%));
+  pointer-events: none;
+}
+
+.range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: none;
+  pointer-events: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.range-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid hsl(280 60% 55%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  pointer-events: all;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.range-thumb::-webkit-slider-thumb:hover {
+  box-shadow: 0 2px 12px hsl(280 60% 55% / 0.35);
+  transform: scale(1.12);
+}
+
+.range-thumb::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid hsl(280 60% 55%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  pointer-events: all;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.range-thumb::-moz-range-thumb:hover {
+  box-shadow: 0 2px 12px hsl(280 60% 55% / 0.35);
+  transform: scale(1.12);
+}
+
+/* give min thumb higher z so it's grabbable at overlap */
+.range-thumb--min {
+  z-index: 3;
+}
+.range-thumb--max {
+  z-index: 2;
+}
+
+/* ── Mobile filter drawer ── */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
