@@ -375,7 +375,7 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
   return (
     <section
       id="topsellingslideshow"
-      className="w-full bg-gradient-to-b from-background to-primary-light/10 py-8 md:py-16 overflow-hidden"
+      className="w-full py-8 md:py-16 overflow-hidden"
     >
       <div className="container mx-auto px-4">
         {/* Section Title */}

@@ -77,7 +77,7 @@ const CreatorCard = ({ creator }: { creator: CreatorProps }) => {
 
 const Creators = () => {
   return (
-    <section id="creators" className="py-20 md:py-32 bg-gradient-to-b from-white to-primary-light/10">
+    <section id="creators" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-up">
@@ -106,7 +106,7 @@ const Creators = () => {
 
         {/* Story Section */}
         <div className="mt-16 md:mt-20 max-w-3xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-soft p-6 md:p-8 lg:p-10 space-y-6 animate-fade-up">
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl shadow-soft p-6 md:p-8 lg:p-10 space-y-6 animate-fade-up">
             <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center">
               Our Story
             </h3>

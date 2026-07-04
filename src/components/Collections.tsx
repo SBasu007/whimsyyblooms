@@ -96,7 +96,7 @@ const Collections = () => {
   };
 
   return (
-    <section id="collections" className="py-5 md:py-32 bg-background">
+    <section id="collections" className="py-5 md:py-32">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">

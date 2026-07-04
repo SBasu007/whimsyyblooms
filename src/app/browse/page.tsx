@@ -152,7 +152,7 @@ export default function BrowsePage() {
   const FilterContent = (
     <>
       {/* Search */}
-      <div className="mb-6">
+      {/* <div className="mb-6">
         <label className="block text-sm font-semibold text-foreground mb-2">
           Search by Name
         </label>
@@ -166,7 +166,7 @@ export default function BrowsePage() {
             className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-border bg-background text-foreground placeholder-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary-dark/40 transition-shadow"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Categories */}
       <div className="mb-6">
@@ -181,8 +181,8 @@ export default function BrowsePage() {
                 key={cat.key}
                 onClick={() => toggleCategory(cat.key)}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border ${active
-                    ? "bg-primary-dark text-white border-primary-dark shadow-sm"
-                    : "bg-primary-lighter text-primary-darker border-primary-light hover:bg-primary-light hover:border-primary"
+                  ? "bg-primary-dark text-white border-primary-dark shadow-sm"
+                  : "bg-primary-lighter text-primary-darker border-primary-light hover:bg-primary-light hover:border-primary"
                   }`}
               >
                 {cat.label}
@@ -253,7 +253,7 @@ export default function BrowsePage() {
 
   /* ═══════════════════ Render ═══════════════════ */
   return (
-    <main className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50">
+    <main className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-4">
         {/* ── Header ── */}
         <div className="flex items-center gap-3 mb-2">
@@ -283,7 +283,7 @@ export default function BrowsePage() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Desktop sidebar */}
           <aside className="hidden lg:block w-72 flex-shrink-0">
-            <div className="sticky top-28 p-5 rounded-2xl bg-white/80 backdrop-blur-sm border border-border shadow-card">
+            <div className="sticky top-28 p-5 rounded-2xl bg-white/50 backdrop-blur-sm border border-purple-200/50 shadow-card">
               <h2 className="text-base font-bold text-foreground mb-4 flex items-center gap-2">
                 <SlidersHorizontal className="w-4 h-4" />
                 Filters
@@ -376,7 +376,7 @@ export default function BrowsePage() {
             onClick={() => setFilterOpen(false)}
           />
           {/* drawer */}
-          <div className="absolute bottom-0 left-0 right-0 max-h-[85vh] overflow-y-auto bg-white rounded-t-3xl p-6 pt-3 animate-slide-up shadow-2xl">
+          <div className="absolute bottom-0 left-0 right-0 max-h-[85vh] overflow-y-auto bg-purple-50/95 backdrop-blur-md rounded-t-3xl p-6 pt-3 animate-slide-up shadow-2xl">
             {/* Handle */}
             <div className="flex justify-center mb-2">
               <div className="w-10 h-1 rounded-full bg-gray-300" />

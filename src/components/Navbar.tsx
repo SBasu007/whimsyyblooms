@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Menu, X, Search } from "lucide-react";
 import { Button } from "./ui/button";
 import Image from "next/image";
@@ -57,6 +57,28 @@ const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestions, setSuggestions] = useState<typeof flowers>([]);
   const router = useRouter();
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      const target = event.target as Element;
+      // Prevent closing when clicking the search toggle button itself
+      if (target.closest('[aria-label="Search"]')) {
+        return;
+      }
+
+      if (searchContainerRef.current && !searchContainerRef.current.contains(target as Node)) {
+        setSuggestions([]);
+        setIsSearchOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, []);
 
   const navLinks = [
     { name: "Home", href: "/#home" },
@@ -116,7 +138,7 @@ const Navbar = () => {
               className="w-10 h-10 md:w-12 md:h-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />
             <span
-  className={`${bubblegum.className} text-2xl md:text-3xl text-foreground`}
+  className={`${bubblegum.className} text-[20px] md:text-3xl text-foreground`}
 >
   WHIMSYY BLOOMS
 </span>
@@ -165,7 +187,7 @@ const Navbar = () => {
 
         {/* Mobile Search Bar */}
         {isSearchOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-up">
+          <div ref={searchContainerRef} className="md:hidden py-4 border-t border-border animate-fade-up">
             <form onSubmit={handleSearch} className="space-y-3">
               <div className="relative flex gap-2">
                 <input
@@ -173,13 +195,32 @@ const Navbar = () => {
                   placeholder="I want to buy..."
                   value={searchQuery}
                   onChange={(e) => handleSearchInput(e.target.value)}
-                  onFocus={() => setSuggestions(flowers)}
+                  onFocus={() => {
+                    if (searchQuery.trim()) {
+                      handleSearchInput(searchQuery);
+                    } else {
+                      setSuggestions(flowers);
+                    }
+                  }}
                   className="flex-1 px-4 py-2 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary-dark"
                 />
                 <Button variant="primary" size="sm" type="submit">
                   Search
                 </Button>
               </div>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                type="button" 
+                className="w-full text-sm font-medium"
+                onClick={() => {
+                  router.push('/browse');
+                  setIsSearchOpen(false);
+                  setSuggestions([]);
+                }}
+              >
+                Browse Filters
+              </Button>
               {/* Suggestions Dropdown */}
               {suggestions.length > 0 && (
                 <div className="bg-background border border-border rounded-lg overflow-hidden">

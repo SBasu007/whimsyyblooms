@@ -116,8 +116,17 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply text-foreground antialiased;
     font-family: var(--font-body), sans-serif;
+    background: linear-gradient(
+      180deg,
+      hsl(280 50% 96%) 0%,
+      hsl(280 40% 94%) 25%,
+      hsl(290 35% 95%) 50%,
+      hsl(280 45% 93%) 75%,
+      hsl(275 50% 96%) 100%
+    );
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {

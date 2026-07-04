@@ -41,7 +41,7 @@ const BouquetCard = ({ id, name, description, price, image, whatsapp_link, delay
       </div>
 
       {/* Content */}
-      <div className="p-4 bg-white flex flex-col flex-grow">
+      <div className="p-4 bg-white/60 backdrop-blur-sm flex flex-col flex-grow">
         <h3 className="text-lg font-semibold text-foreground mb-2">
           {name}
         </h3>

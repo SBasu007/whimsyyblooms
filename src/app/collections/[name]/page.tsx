@@ -75,7 +75,7 @@ export default function CollectionPage() {
   }, [collectionCategory]);
 
   return (
-    <main className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50">
+    <main className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-4">
         {/* Back Button */}
         <Button 
