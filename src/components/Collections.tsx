@@ -7,14 +7,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import FlowerCard from "./FlowerCard";
 
 const flowers = [
-   {
-    name: "Valentine's Day",
-    category: "valentine",
-    description: "Romantic bouquets crafted with love for your special someone.",
-    buyout: "Express your love with our specially curated Valentine's Day collection - where romance blooms eternal.",
-    image: "/valentine.png",
-    color: "#DC143C",
-  },
+  //  {
+  //   name: "Valentine's Day",
+  //   category: "valentine",
+  //   description: "Romantic bouquets crafted with love for your special someone.",
+  //   buyout: "Express your love with our specially curated Valentine's Day collection - where romance blooms eternal.",
+  //   image: "/valentine.png",
+  //   color: "#DC143C",
+  // },
   {
     name: "Sunflower",
     category: "sunflower",

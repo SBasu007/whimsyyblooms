@@ -4,6 +4,11 @@ import Image from "next/image";
 import { MessageCircle } from "lucide-react";
 import { Button } from "./ui/button";
 import { cloudinaryUrl } from "@/lib/cloudinary";
+import { Bubblegum_Sans } from "next/font/google";
+const bubblegum = Bubblegum_Sans({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 interface BouquetCardProps {
   id: string;
@@ -42,7 +47,7 @@ const BouquetCard = ({ id, name, description, price, image, whatsapp_link, delay
 
       {/* Content */}
       <div className="p-4 bg-white/60 backdrop-blur-sm flex flex-col flex-grow">
-        <h3 className="text-lg font-semibold text-foreground mb-2">
+        <h3 className={`${bubblegum.className} text-2xl text-foreground mb-2`}>
           {name}
         </h3>
         {description && (

@@ -5,6 +5,12 @@ import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { cloudinaryUrl } from "@/lib/cloudinary";
+import { Bubblegum_Sans } from "next/font/google";
+
+const bubblegum = Bubblegum_Sans({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 interface SlideItem {
   id: string;
@@ -86,40 +92,40 @@ const defaultTopSelling: SlideItem[] = [
     whatsapp_link: "https://wa.me/p/25434170702878260/917439347678",
   },
   {
-  id: "c754ef58-62f2-4ce7-9a80-06207bd3d830",
-  name: "CR7 Era Bloom",
-  price: 479,
-  image: "https://res.cloudinary.com/dmbu8owle/image/upload/v1772291072/cr7_dpgqcy.jpg",
-  whatsapp_link: "https://wa.me/p/25119197307753145/917439347678",
-},
-{
-  id: "fdd29d97-3570-4600-b3c3-71f7927d87a8",
-  name: "Golden Hour Garden",
-  price: 549,
-  image: "https://res.cloudinary.com/dmbu8owle/image/upload/v1772291072/Goldenhourgarden_svusnr.jpg",
-  whatsapp_link: "https://wa.me/p/26522686463983768/917439347678",
-},
-{
-  id: "04874185-01e2-46b1-a69e-f85d5a2c4859",
-  name: "LM10 Era Bloom",
-  price: 479,
-  image: "https://res.cloudinary.com/dmbu8owle/image/upload/v1772291072/lm10_hgmvty.jpg",
-  whatsapp_link: "https://wa.me/p/25849349178087920/917439347678",
-},
-{
-  id: "995b0d33-a121-4949-bb98-52a17a4f66e8",
-  name: "Scarlet Promise",
-  price: 399,
-  image: "https://res.cloudinary.com/dmbu8owle/image/upload/v1772291073/Scarletpromise_n9lnss.jpg",
-  whatsapp_link: "https://wa.me/p/26365812686359936/917439347678",
-},
-{
-  id: "c42968ab-7cd1-4984-8d52-ceefa16ad1e3",
-  name: "Soft Crimson",
-  price: 299,
-  image: "https://res.cloudinary.com/dmbu8owle/image/upload/v1772291073/softcrimson_wnggkx.jpg",
-  whatsapp_link: "https://wa.me/p/25595528280086284/917439347678",
-},
+    id: "c754ef58-62f2-4ce7-9a80-06207bd3d830",
+    name: "CR7 Era Bloom",
+    price: 479,
+    image: "https://res.cloudinary.com/dmbu8owle/image/upload/v1772291072/cr7_dpgqcy.jpg",
+    whatsapp_link: "https://wa.me/p/25119197307753145/917439347678",
+  },
+  {
+    id: "fdd29d97-3570-4600-b3c3-71f7927d87a8",
+    name: "Golden Hour Garden",
+    price: 549,
+    image: "https://res.cloudinary.com/dmbu8owle/image/upload/v1772291072/Goldenhourgarden_svusnr.jpg",
+    whatsapp_link: "https://wa.me/p/26522686463983768/917439347678",
+  },
+  {
+    id: "04874185-01e2-46b1-a69e-f85d5a2c4859",
+    name: "LM10 Era Bloom",
+    price: 479,
+    image: "https://res.cloudinary.com/dmbu8owle/image/upload/v1772291072/lm10_hgmvty.jpg",
+    whatsapp_link: "https://wa.me/p/25849349178087920/917439347678",
+  },
+  {
+    id: "995b0d33-a121-4949-bb98-52a17a4f66e8",
+    name: "Scarlet Promise",
+    price: 399,
+    image: "https://res.cloudinary.com/dmbu8owle/image/upload/v1772291073/Scarletpromise_n9lnss.jpg",
+    whatsapp_link: "https://wa.me/p/26365812686359936/917439347678",
+  },
+  {
+    id: "c42968ab-7cd1-4984-8d52-ceefa16ad1e3",
+    name: "Soft Crimson",
+    price: 299,
+    image: "https://res.cloudinary.com/dmbu8owle/image/upload/v1772291073/softcrimson_wnggkx.jpg",
+    whatsapp_link: "https://wa.me/p/25595528280086284/917439347678",
+  },
 
   {
     id: "be4f8319-c212-42e1-8330-44ff83e4dd07",
@@ -413,14 +419,14 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
             {/* Top Selling Badge */}
             <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 backdrop-blur-sm px-5 py-3 rounded-full shadow-xl animate-pulse">
               <span className="text-white font-black text-base md:text-lg flex items-center gap-2">
-                 VALENTINE SPECIAL ❤️
+                TOP SELLING 🌟
               </span>
             </div>
 
             {/* Item Info */}
             <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
               <div className="flex items-end justify-between gap-4">
-                <h3 className="inline-block text-xl md:text-3xl font-bold bg-purple-300/90 text-purple-900 px-4 md:px-6 py-2 md:py-3 rounded-lg backdrop-blur-sm">
+                <h3 className={`${bubblegum.className} inline-block text-2xl md:text-4xl font-normal bg-purple-300/90 text-purple-900 px-4 md:px-6 py-2 md:py-3 rounded-lg backdrop-blur-sm`}>
                   {currentItem.name}
                 </h3>
                 <span className="text-2xl md:text-3xl font-bold whitespace-nowrap">
@@ -459,11 +465,10 @@ const TopSellingSlideshow = ({ items = defaultTopSelling }: TopSellingShowProps)
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex
+                className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
                     ? "bg-primary w-8"
                     : "bg-primary/30 w-2 hover:bg-primary/60"
-                }`}
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

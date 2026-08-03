@@ -17,7 +17,7 @@ interface FlowerCardProps {
 const FlowerCard = ({ name, category, description, image, color, buyout, delay = 0 }: FlowerCardProps) => {
   const [showOverlay, setShowOverlay] = useState(false);
   const collectionSlug = category;
-  
+
   return (
     <div
       onClick={() => setShowOverlay(!showOverlay)}
