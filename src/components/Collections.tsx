@@ -19,7 +19,7 @@ const flowers = [
     name: "Sunflower",
     category: "sunflower",
     description: "Bright and cheerful blooms that bring warmth and happiness to any space.",
-    buyout:"Pure sunshine bursting with joy – perfect for uplifting the heart." ,
+    buyout: "Pure sunshine bursting with joy – perfect for uplifting the heart.",
     image: "/sunflower.png",
     color: "#F5B041",
   },
@@ -27,7 +27,7 @@ const flowers = [
     name: "Gerbera",
     category: "gerbera",
     description: "Vibrant daisy-like flowers available in a stunning array of colors.",
-    buyout:"Lively compositions of gerberas , gracefully symbolizing purity, innocence, and joy",
+    buyout: "Lively compositions of gerberas , gracefully symbolizing purity, innocence, and joy",
     image: "/gerbera.png",
     color: "#E74C3C",
   },
@@ -35,7 +35,7 @@ const flowers = [
     name: "Orchid",
     category: "orchid",
     description: "Exotic and elegant blooms that symbolize luxury and refined beauty.",
-    buyout:"Exquisite orchids symbolizing luxury, rare beauty, and enduring love.",
+    buyout: "Exquisite orchids symbolizing luxury, rare beauty, and enduring love.",
     image: "/orchid.png",
     color: "#CB94F7",
   },
@@ -43,7 +43,7 @@ const flowers = [
     name: "Market Roses",
     category: "localrose",
     description: "Timeless classics expressing love, passion and heartfelt emotions.",
-    buyout:"Where every petal is a promise of love",
+    buyout: "Where every petal is a promise of love",
     image: "/rose.png",
     color: "#C0392B",
   },
@@ -51,23 +51,23 @@ const flowers = [
     name: "Premium Roses",
     category: "bangalorerose",
     description: "Premium roses known for their vibrant colors and long-lasting freshness.",
-    buyout:"Premium roses renowned for vibrant color and lasting freshness.",  
+    buyout: "Premium roses renowned for vibrant color and lasting freshness.",
     image: "/bangalorerose.png",
     color: "#E91E63",
   },
-  {
-    name: "Satin Roses",
-    category: "satinroses",
-    description: "Satin roses known for their vibrant colors and immortal life.",
-    buyout:"Satin roses are artificial blooms expertly fashioned from lustrous satin fabric, capturing the timeless",  
-    image: "/satinrose.png",
-    color: "#E91E63",
-  },
+  // {
+  //   name: "Satin Roses",
+  //   category: "satinroses",
+  //   description: "Satin roses known for their vibrant colors and immortal life.",
+  //   buyout:"Satin roses are artificial blooms expertly fashioned from lustrous satin fabric, capturing the timeless",  
+  //   image: "/satinrose.png",
+  //   color: "#E91E63",
+  // },
   {
     name: "Hot Wheels",
     category: "hotwheels",
     description: "Adorable and fun toys to bring joy to every occasion.",
-    buyout:"Perfect for young enthusiasts and playful gifts that combine excitement with elegance.",
+    buyout: "Perfect for young enthusiasts and playful gifts that combine excitement with elegance.",
     image: "/toy.png",
     color: "#FFD700",
   },
@@ -75,11 +75,11 @@ const flowers = [
     name: "Chocolates",
     category: "chocolate",
     description: "Delicious chocolates to sweeten your celebrations.",
-    buyout:"Here every chocolate is a flower and every bite is a bloom of pure joy",
+    buyout: "Here every chocolate is a flower and every bite is a bloom of pure joy",
     image: "/chocolate.png",
     color: "#8B4513",
   },
- 
+
 ];
 
 const Collections = () => {
@@ -107,7 +107,7 @@ const Collections = () => {
             Explore Our Collections
           </h2>
           <p className="text-muted-foreground text-lg">
-            Each bouquet is thoughtfully arranged to capture the unique essence 
+            Each bouquet is thoughtfully arranged to capture the unique essence
             and beauty of nature&apos;s most stunning blooms.
           </p>
         </div>
@@ -118,7 +118,7 @@ const Collections = () => {
           {/* Mobile grid (shown on small screens) */}
           <div className="grid grid-cols-2 gap-4 md:hidden">
             {flowers.map((flower, index) => (
-              <Link 
+              <Link
                 key={flower.name}
                 href={`/collections/${flower.category}${flower.buyout ? `?buyout=${encodeURIComponent(flower.buyout)}` : ''}`}
                 className="flex flex-col items-center animate-fade-up group"

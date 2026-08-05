@@ -7,14 +7,14 @@ import { Button } from "@/components/ui/button";
 import BouquetCard from "@/components/BouquetCard";
 import { supabase, FlowerCatalog } from "@/lib/supabase";
 
-/* ───────── category map (no valentine) ───────── */
+/* ───────── category map  ───────── */
 const CATEGORIES: { key: string; label: string }[] = [
   { key: "sunflower", label: "Sunflower" },
   { key: "gerbera", label: "Gerbera" },
   { key: "orchid", label: "Orchid" },
   { key: "localrose", label: "Market Roses" },
   { key: "bangalorerose", label: "Premium Roses" },
-  { key: "satinroses", label: "Satin Roses" },
+  // { key: "satinroses", label: "Satin Roses" },
   { key: "hotwheels", label: "Hot Wheels" },
   { key: "chocolate", label: "Chocolates" },
 ];
@@ -65,7 +65,8 @@ export default function BrowsePage() {
         setLoading(true);
         const { data, error: err } = await supabase
           .from("flower_catalog")
-          .select("*");
+          .select("*")
+          .eq("active", true);
 
         if (err) throw err;
 
