@@ -71,11 +71,11 @@ const About = () => {
           </div>
 
           {/* Content */}
-          <div>
+          <div className="text-center lg:text-left">
             <span className="inline-block px-4 py-2 bg-primary-light/50 text-primary-darker rounded-full text-sm font-medium mb-4">
               About Us
             </span>
-            <h2 className="font-display text-center text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
               Crafting Moments of{" "}
               <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 bg-clip-text text-transparent">Natural Beauty</span>
             </h2>
@@ -155,12 +155,12 @@ const About = () => {
               </div>
               <div className="w-full h-48 md:h-56 rounded-lg overflow-hidden border border-border/30">
                 <iframe
-                  title="Whimsyy Blooms Workshop Location"
-                  src="https://maps.google.com/maps?q=22.50928,88.3477398&z=16&output=embed"
-                  className="w-full h-full border-0"
+                  src="https://www.google.com/maps?q=Whimsyy%20Blooms,%2022.50928,88.3477398&z=16&output=embed"
+                  width="100%"
+                  height="450"
+                  style={{ border: "0" }}
                   allowFullScreen
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
             </div>
