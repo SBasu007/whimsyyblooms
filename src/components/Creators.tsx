@@ -20,7 +20,7 @@ const creators: CreatorProps[] = [
     image: "/creators/ambar.png",
   },
   {
-    name: "Soumodeep Saha",
+    name: "Soumyadeep Saha",
     role: "Head of Finance & Management",
     education: "Pursuing Bachelor in Commerce (Honours)",
     description:
